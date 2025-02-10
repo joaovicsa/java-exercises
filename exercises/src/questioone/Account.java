@@ -33,5 +33,13 @@ public class Account {
 	
 	// create the withdraw method that checks if the value declared is valid accordingly to the balance.
 	
+	public void withdraw(double withdrawAmount) {
+		if(withdrawAmount>balance) {
+			System.out.println("Withdraw amount exceeded account balance.");
+		} else {
+			balance -= withdrawAmount;
+			System.out.println("Withdraw Success!");
+		}
+	}
 	
 }

@@ -31,6 +31,13 @@ public class AccountTest {
 		System.out.printf("%s balance: $%.2f%n", account1.getName(), account1.getBalance());
 		System.out.printf("%s balance: $%.2f", account2.getName(), account2.getBalance());
 		
+		System.out.printf("%n%nEnter a value to be withdrawn from %s account: ", account1.getName());
+		double withdrawnAmount = input.nextDouble();
+		account1.withdraw(withdrawnAmount);
+		
+		System.out.printf("%n%s balance: $%.2f%n", account1.getName(), account1.getBalance());
+		System.out.printf("%s balance: $%.2f", account2.getName(), account2.getBalance());
+		
 		input.close();
 		
 	}
